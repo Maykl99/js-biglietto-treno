@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body>#risultato{
+    height: 100vh;
+    font-size: 40px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
