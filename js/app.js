@@ -21,12 +21,12 @@ if(isNaN(lunghezzaViaggio) || isNaN(etaViaggiatori) || isNaN(prezzoKm)){  // Con
 
 else{ // esegui se e solo se i valori sono numerici
     if(etaViaggiatori < 18){
-        var scontoSulPrezzoMinori = ( 20 * prezzoKm / 100 );
+        var scontoSulPrezzoMinori = 20 * prezzoKm / 100 ;
         var prezzoFinale = prezzoKm - scontoSulPrezzoMinori;
     }
 
     else if(etaViaggiatori > 65){
-        var scontoSulPrezzoOver = ( 40 * prezzoKm / 100 );
+        var scontoSulPrezzoOver = 40 * prezzoKm / 100 ;
         var prezzoFinale = prezzoKm - scontoSulPrezzoOver;
     }
 
