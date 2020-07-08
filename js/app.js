@@ -25,7 +25,7 @@ else{ // esegui se e solo se i valori sono numerici
         var prezzoFinale = prezzoKm - scontoSulPrezzoMinori;
     }
 
-    else if(etaViaggiatori >= 65){
+    else if(etaViaggiatori > 65){
         var scontoSulPrezzoOver = ( 40 * prezzoKm / 100 );
         var prezzoFinale = prezzoKm - scontoSulPrezzoOver;
     }
