@@ -7,38 +7,49 @@ va applicato uno sconto del 40% per gli over 65 */
 
 
 // metodo 1
-/* var lunghezzaViaggio = parseInt(prompt('Quanti km devi percorrere?'));
+
+var lunghezzaViaggio = parseInt(prompt('Quanti km devi percorrere?'));
 var etaViaggiatori = parseInt(prompt('Quanti anni hai?'));
 var prezzoKm = 0.21 * lunghezzaViaggio;
 var scontoSulPrezzoMinori;
 var scontoSulPrezzoOver;
 
 
+if(isNaN(lunghezzaViaggio) || isNaN(etaViaggiatori) || isNaN(prezzoKm)){  // Controllo valori passanti
+    alert('inserisci soltanto numeri e non lasciare vuoti i campi di compilazione!'); 
+} 
 
-if(etaViaggiatori < 18){
-    var scontoSulPrezzoMinori = ( 20 * prezzoKm / 100 );
-    var prezzoFinale = prezzoKm - scontoSulPrezzoMinori;
+else{ // esegui se e solo se i valori sono numerici
+    if(etaViaggiatori < 18){
+        var scontoSulPrezzoMinori = ( 20 * prezzoKm / 100 );
+        var prezzoFinale = prezzoKm - scontoSulPrezzoMinori;
+    }
+
+    else if(etaViaggiatori >= 65){
+        var scontoSulPrezzoOver = ( 40 * prezzoKm / 100 );
+        var prezzoFinale = prezzoKm - scontoSulPrezzoOver;
+    }
+
+    else{
+        var prezzoFinale = prezzoKm;
+    }
+
+    var risultato= document.getElementById('risultato').innerHTML='il tuo biglietto costa ' +  Math.round(prezzoFinale) + ' euro'; 
 }
 
-else if(etaViaggiatori >= 65){
-    var scontoSulPrezzoOver = ( 40 * prezzoKm / 100 );
-    var prezzoFinale = prezzoKm - scontoSulPrezzoOver;
-}
-
-else{
-    var prezzoFinale = prezzoKm;
-}
 
 
-var risultato= document.getElementById('risultato').innerHTML='il tuo biglietto costa ' +  Math.round(prezzoFinale) + ' euro'; 
- */
+
+
+
+
 
 
 
 
 // metodo 2
 
-var  prezzoKm;
+/* var  prezzoKm;
 var lunghezza;
 var eta;
 
@@ -63,4 +74,4 @@ function Viaggio(){
 }
 
 
-console.log(Viaggio())
+console.log(Viaggio()) */
